@@ -1,4 +1,4 @@
 # student-information-system
 
-- İntelij idea
+- İntellij idea
 - MySQL
