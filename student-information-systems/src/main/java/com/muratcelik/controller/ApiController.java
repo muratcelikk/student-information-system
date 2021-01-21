@@ -38,7 +38,7 @@ public class ApiController {
     }
 
     //Delete
-    @PostMapping(value = "/admin/deleteStudent")
+    @DeleteMapping(value = "/admin/deleteStudent")
     public ResponseEntity<String> deleteStudent(@RequestBody Student student) {
         studentService.deleteStudentById(student.getId());
         return new ResponseEntity<>("OK", HttpStatus.CREATED);
@@ -58,13 +58,13 @@ public class ApiController {
     }
 
     //Update
-    @PostMapping(value = "/admin/updateStudent")
+    @PutMapping(value = "/admin/updateStudent")
     public ResponseEntity<String> updateStudent(@RequestBody Student student) {
         studentService.updateStudent(student);
         return new ResponseEntity<>("OK", HttpStatus.CREATED);
     }
 
-    @PostMapping(value = "/admin/updateLesson")
+    @PutMapping(value = "/admin/updateLesson")
     public ResponseEntity<String> updateLesson(@RequestBody Lesson lesson) {
         lessonService.updateLesson(lesson);
         return new ResponseEntity<>("OK", HttpStatus.CREATED);
